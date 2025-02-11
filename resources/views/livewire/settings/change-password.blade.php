@@ -1,4 +1,5 @@
-<div>
+<div class="">
+    @include('layout.all_notif')
     {{-- Stop trying to control. --}}
     <form class="p-4 border rounded shadow-sm bg-light" wire:submit.prevent="change_password">
         <h1 class="mb-4 text-center flex justify-center">

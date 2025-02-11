@@ -1,6 +1,6 @@
 @extends('Admin.layout.layout')
 
-@section('title', 'Login Page')
+@section('title', 'Settings Page')
 
 @section('script')
 
@@ -11,11 +11,14 @@
         @include('Admin.partials.navbar')
         @include('Admin.partials.sidebar')
 
-        <a href="{{route('admin.password')}}">
-            <button>
-                <h1>Change Password</h1>
-            </button>
-        </a>
+        <div class="flex justify-start p-20">
+            <a href="{{route('admin.password')}}">
+                <button class="flex items-center gap-2 px-6 py-3 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <i class="fas fa-lock"></i>
+                    <span>Change Password</span>
+                </button>
+            </a>
+        </div>
 
     </div>
 @endsection

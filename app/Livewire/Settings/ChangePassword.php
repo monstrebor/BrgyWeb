@@ -16,12 +16,13 @@ class ChangePassword extends Component
 
     public function change_password()
     {
-        $this->form->validate();
+        $this->validate();
         $user = Auth::user();
 
-        if (Hash::check($this->form->old_password, $user->password)) {
+        if (Hash::check($this->old_password, $user->password)) {
             $user->update([
-                'password' => Hash::make($this->form->new_password),
+                'password' => Hash::make($this->new_password),
+                'is_new'=> false,
             ]);
             session()->flash('success', 'Your password has been updated successfully.');
             return;

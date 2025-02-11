@@ -18,13 +18,13 @@ class UserLogin extends Component
     public function loginUser()
     {
         $this->validate();
-
         if (Auth::attempt(['email' => $this->email, 'password' => $this->password])) {
             session()->regenerate();
-            return redirect()->route('admin.home');
-        } else {
-            $this->addError('email', 'Invalid credentials, please try again.');
+            return Auth::user()->is_new
+                ? redirect()->route('admin.password')->with('message', 'Please change your password.')
+                : redirect()->route('admin.home');
         }
+        $this->addError('email', 'Invalid credentials.');
     }
 
     public function render()

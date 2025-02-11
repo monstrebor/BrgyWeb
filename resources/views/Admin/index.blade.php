@@ -3,7 +3,7 @@
 @section('title', 'Login Page')
 
 @section('script')
-    
+
 @endsection
 
 @section('content')
