@@ -10,15 +10,10 @@
         <li class="nav-item mb-4">
             <a class="nav-link disabled" href="#"><i class="fas fa-ban"></i> <span>Disabled</span></a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item mb-4">
             <a class="nav-link" href="{{route('admin.settings')}}"><i class="fas fa-cog"></i> <span>Settings</span></a>
         </li>
-        <li class="nav-item mb-4">
-            <form wire:submit.prevent="logout">
-                <button type="submit" class="btn btn-danger">
-                    <i class="fas fa-sign-out-alt"></i> Logout
-                </button>
-            </form>
-        </li>
+        <livewire:logout />
     </ul>
 </div>
+

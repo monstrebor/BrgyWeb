@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use Livewire\Component;
 
 class Logout extends Component
@@ -10,10 +11,10 @@ class Logout extends Component
     public function logout()
     {
         Auth::logout();
-        session()->invalidate();
-        session()->regenerateToken();
+        Session::invalidate();
+        Session::regenerateToken();
 
-        return redirect()->route('home.login');
+        return redirect()->route('login.user');
     }
 
     public function render()

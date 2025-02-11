@@ -1,7 +1,5 @@
 <?php
 
-use App\Http\Livewire\Logout;
-use App\Livewire\Logout as LivewireLogout;
 use Illuminate\Support\Facades\Route;
 
 // Guest Routes
@@ -17,7 +15,4 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
     Route::view('/settings', 'settings.index')->name('admin.settings');
     Route::view('/change-password', 'settings.change-password')->name('admin.password');
 });
-
-// Logout Route (Trigger Livewire Component)
-Route::get('/logout', LivewireLogout::class)->name('logout');
 
