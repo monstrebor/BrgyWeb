@@ -1,4 +1,7 @@
 <div>
+
+
+
     {{-- Success is as dangerous as failure. --}}
     <form wire:submit.prevent="registerUser">
         <h3 class="mb-10 text-2xl text-white font-bold font-heading text-center">Register Account</h3>
@@ -41,7 +44,7 @@
         @enderror
         <div class="inline-flex mb-10">
             <input class="mr-4" type="checkbox">
-            <p class="-mt-2 text-sm text-gray-200">By singning up, you agree to our <a class="text-white"
+            <p class="-mt-2 text-sm text-gray-200">By signing up, you agree to our <a class="text-white"
                     href="#">Terms, Data Policy</a> and <a class="text-white" href="#">Cookies.</a></p>
         </div>
         <button type="submit"
