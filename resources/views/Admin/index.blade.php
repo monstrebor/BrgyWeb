@@ -1,6 +1,6 @@
 @extends('Admin.layout.layout')
 
-@section('title', 'Login Page')
+@section('title', 'Dashboard Page')
 
 @section('script')
 

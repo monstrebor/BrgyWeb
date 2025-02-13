@@ -22,7 +22,7 @@
     <style>
         /* Sidebar Styling */
         .sidebar {
-            width: 50px; /* Collapsed width */
+            width: 70px; /* Collapsed width */
             height: 100vh;
             background: #343a40;
             position: fixed;

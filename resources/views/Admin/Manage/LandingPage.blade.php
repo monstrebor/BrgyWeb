@@ -1,6 +1,6 @@
 @extends('Admin.layout.layout')
 
-@section('title', 'Change Password Page')
+@section('title', 'Manage Landing Page')
 
 @section('script')
 
@@ -10,8 +10,10 @@
     <div class="w-full h-full">
         @include('Admin.partials.navbar')
         @include('Admin.partials.sidebar')
+
         <div class="offset-3 col-6 mt-4">
-            <livewire:settings.change-password>
+            @include('layout.all_notif')
+            <livewire:LandingPage>
         </div>
 
     </div>
